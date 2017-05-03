@@ -10,24 +10,29 @@
 #import "AdditionQuestion.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
+        QuestionManager *questionManager = [[QuestionManager alloc]init];
         
         while (TRUE){
-            AdditionQuestion *question1 = [[AdditionQuestion alloc] init];
-            printf("What is the answer: ");
+            AdditionQuestion *question = [[AdditionQuestion alloc] init];
+            NSLog(@"%@", question.question);
             
+            printf("What is the answer: ");
             NSString* inputStr = [InputHandler getInput];
             
             if ([inputStr isEqual: @"quit"]){
                 break;}
             
+            NSInteger answer = [question getAnswer];
+            
             NSInteger intValue = [inputStr integerValue];
-            if (intValue == question1.answer){
+            if (intValue == answer){
                 NSLog(@"Right!");
                 [scoreKeeper IncreaseRight];
                 NSLog(@"Your have %ld right, %ld wrong", (long)scoreKeeper.right, (long)scoreKeeper.wrong);
@@ -37,13 +42,20 @@ int main(int argc, const char * argv[]) {
                 [scoreKeeper IncreaseWrong];
                 NSLog(@"Your have %ld right, %ld wrong", (long)scoreKeeper.right, (long)scoreKeeper.wrong);
                 }
-                [scoreKeeper CalcPercent];
+            
+            [scoreKeeper CalcPercent];
+            [questionManager.questions addObject:question];
             NSLog(@"Your batting average is %ld", (long)scoreKeeper.percent);
+            
+            NSInteger elapsedTime = [question answerTime];
+            NSLog(@"That question took %ld", (long)elapsedTime);
+            
+            
         }
-    
         
-    
-    return 0;}
+        
+    }
+    return 0;
 
 }
 
