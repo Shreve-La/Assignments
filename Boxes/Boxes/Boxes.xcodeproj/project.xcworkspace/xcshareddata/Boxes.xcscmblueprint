@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6154544A78DB2EDEF153EBE55621C441560B8325",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D42D2B2ABB91F3285757C6CD158A6FF5C7DE8941" : 9223372036854775807,
+    "6154544A78DB2EDEF153EBE55621C441560B8325" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8FCBC415-4E76-46A7-9A5F-21F6B987A551",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D42D2B2ABB91F3285757C6CD158A6FF5C7DE8941" : "",
+    "6154544A78DB2EDEF153EBE55621C441560B8325" : "assignments\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Boxes",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Boxes\/Boxes\/Boxes.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Shreve-La\/LLPrepAssignments.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6154544A78DB2EDEF153EBE55621C441560B8325"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Shreve-La\/Lighthouse.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D42D2B2ABB91F3285757C6CD158A6FF5C7DE8941"
+    }
+  ]
+}
