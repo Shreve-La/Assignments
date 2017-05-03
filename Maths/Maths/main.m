@@ -30,12 +30,15 @@ int main(int argc, const char * argv[]) {
             if (intValue == question1.answer){
                 NSLog(@"Right!");
                 [scoreKeeper IncreaseRight];
-//                NSLog(@"Your have %ld right, %ld wrong, for %.0f %% right \n", scoreKeeper.right, scoreKeeper.wrong,scoreKeeper.percent);
+                NSLog(@"Your have %ld right, %ld wrong", (long)scoreKeeper.right, (long)scoreKeeper.wrong);
+        
             }else{
                 NSLog(@"Wrong!");
                 [scoreKeeper IncreaseWrong];
-//                NSLog(@"Your have %ld right, %ld wrong, for %.0f %% right \n", (long)scoreKeeper.right, (long)scoreKeeper.wrong,scoreKeeper.percent);
+                NSLog(@"Your have %ld right, %ld wrong", (long)scoreKeeper.right, (long)scoreKeeper.wrong);
                 }
+                [scoreKeeper CalcPercent];
+            NSLog(@"Your batting average is %ld", (long)scoreKeeper.percent);
         }
     
         
