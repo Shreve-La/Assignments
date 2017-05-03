@@ -16,11 +16,7 @@
         NSInteger secondNum = arc4random_uniform(100);
         _question = [NSString stringWithFormat:@"What is %ld + %ld", firstNum, secondNum];
         _answer = firstNum + secondNum;
-        
-  //      NSLog(@"What is %ld + %ld", firstNum, secondNum);
-        NSDate *startTime = [NSDate date];
-        NSLog(@"Start time: %@", startTime);
-
+        _startTime = [NSDate date];
         }
     return self;
     }

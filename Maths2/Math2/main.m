@@ -1,6 +1,6 @@
 //
 //  main.m
-//  Maths
+//  Maths 2
 //
 //  Created by swcl on 2017-05-02.
 //  Copyright © 2017 Shreve LaFramenta. All rights reserved.
@@ -43,13 +43,10 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"Your have %ld right, %ld wrong", (long)scoreKeeper.right, (long)scoreKeeper.wrong);
                 }
             
-            [scoreKeeper CalcPercent];
+                [scoreKeeper CalcPercent];
             [questionManager.questions addObject:question];
             NSLog(@"Your batting average is %ld", (long)scoreKeeper.percent);
-            
-            NSInteger elapsedTime = [question answerTime];
-            NSLog(@"That question took %ld", (long)elapsedTime);
-            
+            [questionManager timeOutput];
             
         }
         

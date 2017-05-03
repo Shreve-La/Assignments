@@ -11,5 +11,11 @@
 @interface QuestionManager : NSMutableArray
 
 @property NSMutableArray *questions;
+@property NSString *timeStats;
+@property NSTimeInterval totalT;
+@property NSTimeInterval *averageT;
+
+-(NSString*)timeOutput;
+
 
 @end
