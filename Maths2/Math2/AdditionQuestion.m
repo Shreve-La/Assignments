@@ -2,7 +2,7 @@
 //  AdditionQuestion.m
 //  Maths
 //
-//  Created by swcl on 2017-05-02.
+//  Created by swcl on 2017-05-04.
 //  Copyright © 2017 Shreve LaFramenta. All rights reserved.
 //
 
@@ -10,29 +10,27 @@
 
 @implementation AdditionQuestion
 
-- (instancetype) init {
-    if (self = [super init]){
-        NSInteger firstNum = arc4random_uniform(100);
-        NSInteger secondNum = arc4random_uniform(100);
-        _question = [NSString stringWithFormat:@"What is %ld + %ld", firstNum, secondNum];
-        _answer = firstNum + secondNum;
-        _startTime = [NSDate date];
-        }
-    return self;
-    }
 
-- (NSInteger) getAnswer {
-    self.endTime = [NSDate date];
-    return self.answer;
+
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self = [super init]) {
+        [self generateQuestion];
+    }
+    return self;
 }
 
-- (NSInteger) answerTime {
-    NSTimeInterval elapsedTime = [_endTime timeIntervalSinceDate:_startTime];
-    
-    return elapsedTime;
-    }
+- (void)gererateQuestion{
+    self.question = [NSString stringWithFormat:@"What is %ld + %ld?", self.rightValue, self.leftValue];
+    self.answer = self.rightValue + self.leftValue;
+}
 
 
-NSDate *endTime;
+
+
+
+
 
 @end

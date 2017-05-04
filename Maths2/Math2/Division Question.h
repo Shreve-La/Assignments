@@ -1,5 +1,5 @@
 //
-//  AdditionQuestion.h
+//  Division Question.h
 //  Maths
 //
 //  Created by swcl on 2017-05-04.
@@ -8,8 +8,6 @@
 
 #import "Question.h"
 
-@interface AdditionQuestion : Question
-
-
+@interface Division_Question : Question
 
 @end

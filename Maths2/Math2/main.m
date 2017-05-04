@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
+#import "Question.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "QuestionFactory.h"
+
 
 
 int main(int argc, const char * argv[]) {
@@ -18,10 +20,20 @@ int main(int argc, const char * argv[]) {
         
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
         QuestionManager *questionManager = [[QuestionManager alloc]init];
+        QuestionFactory *questionFactory = [[QuestionFactory alloc] init];
+
+
         
         while (TRUE){
-            AdditionQuestion *question = [[AdditionQuestion alloc] init];
-            NSLog(@"%@", question.question);
+//            Question *question = [[Question alloc] init];
+//            NSLog(@"%@", question.question);
+//            
+                        Question *question = [[Question alloc] init];
+            
+                        NSLog(@"%@", [AdditionQuestion generatequestion ]);
+                        
+
+            
             
             printf("What is the answer: ");
             NSString* inputStr = [InputHandler getInput];
@@ -45,7 +57,7 @@ int main(int argc, const char * argv[]) {
             
                 [scoreKeeper CalcPercent];
             [questionManager.questions addObject:question];
-            NSLog(@"Your batting average is %ld", (long)scoreKeeper.percent);
+            NSLog(@"Your have gotten %ld%% right", (long)scoreKeeper.percent);
             [questionManager timeOutput];
             
         }

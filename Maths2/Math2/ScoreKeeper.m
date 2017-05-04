@@ -28,7 +28,7 @@
 }
 
 -(void)CalcPercent {
-self.percent = (1000 * self.right) / (self.right+self.wrong);
+self.percent = (100 * self.right) / (self.right+self.wrong);
 }
 
 @end
